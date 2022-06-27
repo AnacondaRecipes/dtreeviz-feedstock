@@ -40,17 +40,6 @@ outputs:
         - pip check
       requires:
         - pip
-  - name: {{ name }}-extended
-    requirements:
-      host:
-        - pip
-        - python >=3.6
-      run:
-        - python >=3.6
-        - {{ pin_subpackage(name, exact=True) }}
-        - pyspark
-        - py-xgboost
-        - lightgbm
 
     test:
       imports:
